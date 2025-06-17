@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <div className="flex items-center h-screen bg-gradient-to-r from-black to-emerald-500 dark:from-white dark:to-emerald-600 dark:text-black text-white font-roboto">
       {/* Left half content */}
-      <div className="w-1/2 pl-16 pb-16">
-        <div className="text-6xl font-semibold">
+      <div className="w-13/4 md:w-1/2 pl-8 md:pl-16 pb-16">
+        <div className="text-5xl md:text-6xl font-semibold">
           Hi, my name is <span className="text-blue-400 dark:text-blue-700">Arya</span>
         </div>
         <div className="text-2xl mt-4 dark:text-gray-800">
