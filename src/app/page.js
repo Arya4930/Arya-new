@@ -3,13 +3,13 @@ import DarkModeButton from './components/darkModeButton';
 
 export default function Page() {
   const baseClass =
-    "inline-block text-3xl mr-4 mt-4 transition-all duration-200 transform hover:cursor-pointer";
+    "inline-block text-3xl mr-4 mt-4 transition-all duration-200 transform hover:cursor-pointer md:text-3xl text-2xl md:mr-4 mr-3 md:mt-4 mt-3";
   
   return (
     <div className="flex items-center h-screen bg-gradient-to-r from-black to-emerald-500 dark:from-white dark:to-emerald-600 dark:text-black text-white font-roboto">
       {/* Left half content */}
       <div className="w-1/2 pl-16 pb-16">
-        <div className="text-6xl font-semibold">
+        <div className="text-6xl font-semibold sm:text-4xl">
           Hi, my name is <span className="text-blue-400 dark:text-blue-700">Arya</span>
         </div>
         <div className="text-2xl mt-4 dark:text-gray-800">
@@ -26,7 +26,7 @@ export default function Page() {
           <FaInstagram className={`${baseClass} hover:text-pink-400 dark:hover:text-pink-500`} />
         </div>
       </div>
-      <div className='absolute top-4 right-4 z-10'>
+      <div className='absolute top-4 right-4 z-10 md:top-4 md:right-4 top-6 right-6'>
         <DarkModeButton />
       </div>
     </div>
