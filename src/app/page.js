@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaDiscord, FaReddit, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaDiscord, FaReddit, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import DarkModeButton from './components/darkModeButton';
 
 export default function Page() {
@@ -24,6 +24,7 @@ export default function Page() {
           <a href='https://x.com/SpaceStuffArya' target="_blank" rel="noopener noreferrer"><FaTwitter className={`${baseClass} hover:text-blue-400 dark:hover:text-blue-500`} /></a>
           <a href='https://www.reddit.com/user/SusUser22/' target="_blank" rel="noopener noreferrer"><FaReddit className={`${baseClass} hover:text-orange-500 dark:hover:text-orange-600`} /></a>
           <a href='https://www.instagram.com/arya_panwar22/' target="_blank" rel="noopener noreferrer"><FaInstagram className={`${baseClass} hover:text-pink-400 dark:hover:text-pink-500`} /></a>
+          <a href='mailto:aryapanwar493@gmail.com' target='_blank' rel="noopener noreferrer"><FaEnvelope className={`${baseClass} hover:text-red-400 dark:hover:text-red-500`} /></a>
         </div>
       </div>
       <div className='absolute top-4 right-4 z-10'>
