@@ -1,17 +1,20 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaDiscord, FaReddit, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import DarkModeButton from './components/darkModeButton';
+import Carousel from '@/app/components/Carousel';
 
 export default function Page() {
   const baseClass =
-    "inline-block text-3xl mr-4 mt-4 transition-all duration-200 transform hover:cursor-pointer";
-  
+    "inline-block text-3xl mr-4 mt-4 transition-all duration-200 hover:scale-110 cursor-pointer";
+
   return (
-    <div className="flex items-center h-screen bg-gradient-to-r from-black to-emerald-500 dark:from-white dark:to-emerald-600 dark:text-black text-white font-roboto">
-      {/* Left half content */}
-      <div className="w-13/4 md:w-1/2 pl-8 md:pl-16 pb-16">
-        <div className="text-5xl md:text-6xl font-semibold">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-black to-emerald-500
+      dark:from-white dark:to-emerald-600 dark:text-black text-white font-roboto">
+
+      {/* LEFT SECTION */}
+      <div className="w-full md:w-[45%] px-4 pt-48 md:pt-0 md:px-16 py-16 flex flex-col justify-center">
+        <h1 className="text-5xl md:text-6xl font-semibold">
           Hi, my name is <span className="text-blue-400 dark:text-blue-700">Arya</span>
-        </div>
+        </h1>
         <div className="text-2xl mt-4 dark:text-gray-800">
           I like <a className="text-green-300 dark:text-green-700 hover:underline" href='https://namemc.com/profile/Sparky493.1'>Minecraft</a>, <a className="text-yellow-700 dark:text-yellow-600 hover:underline" href='https://www.chess.com/member/player493p'>Chess</a>, <a className='hover:underline' href='https://x.com/SpaceStuffArya'>Rockets</a> and <a className="text-blue-300 dark:text-blue-600 hover:underline" href='https://github.com/Arya4930'>Coding</a>.
           <br />
@@ -29,6 +32,17 @@ export default function Page() {
       </div>
       <div className='absolute top-4 right-4 z-10'>
         <DarkModeButton />
+      </div>
+
+      {/* RIGHT SECTION */}
+      <div className="w-full md:w-[55%] px-8 md:px-8 pt-2 flex flex-col justify-center">
+        <div className="mb-6 md:hidden">
+          <h2 className="text-4xl font-bold tracking-tight">
+            My Projects
+          </h2>
+          <div className="w-20 h-1 bg-emerald-400 mt-2 rounded-full" />
+        </div>
+        <Carousel />
       </div>
     </div>
   );
