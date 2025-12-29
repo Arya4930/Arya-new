@@ -52,11 +52,10 @@ export default function HackathonCarousel() {
                                         {project.title}
                                     </h3>
 
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-3">
                                         {project.desc}
                                     </p>
                                 </motion.div>
-
                             </a>
                         </SwiperSlide>
                     ))}
