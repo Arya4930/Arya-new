@@ -24,7 +24,7 @@ export default function HackathonCarousel() {
 
     return (
         <div className="w-full h-screen flex items-center justify-center">
-            <div className="w-full max-w-xl h-full overflow-visible">
+            <div className="w-full max-w-xl h-full md:overflow-visible">
                 <Swiper
                     direction="vertical"
                     slidesPerView={5}
