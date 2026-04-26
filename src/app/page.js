@@ -3,6 +3,7 @@ import DarkModeButton from './components/darkModeButton';
 import Carousel from '@/app/components/Carousel';
 import Footer from './components/Footer';
 import Banana from './components/Banana';
+import Link from 'next/link';
 
 export default function Page() {
   const baseClass =
@@ -22,7 +23,7 @@ export default function Page() {
             <br />
             I also build things for the Web.
           </div>
-          <div className='mt-4'>
+          <div className='my-4'>
             <a href='https://discord.com/users/897794324748730368' target="_blank" rel="noopener noreferrer"><FaDiscord className={`${baseClass} hover:text-indigo-400 dark:hover:text-indigo-600`} /></a>
             <a href='https://github.com/Arya4930' target="_blank" rel="noopener noreferrer"><FaGithub className={`${baseClass} hover:text-gray-300 dark:hover:text-gray-600`} /></a>
             <a href='https://www.linkedin.com/in/arya-panwar-923375267/' target="_blank" rel="noopener noreferrer"><FaLinkedin className={`${baseClass} hover:text-blue-600 dark:hover:text-blue-700`} /></a>
@@ -30,6 +31,11 @@ export default function Page() {
             <a href='https://www.reddit.com/user/SusUser22/' target="_blank" rel="noopener noreferrer"><FaReddit className={`${baseClass} hover:text-orange-500 dark:hover:text-orange-600`} /></a>
             <a href='https://www.instagram.com/arya_panwar22/' target="_blank" rel="noopener noreferrer"><FaInstagram className={`${baseClass} hover:text-pink-400 dark:hover:text-pink-500`} /></a>
             <a href='mailto:aryapanwar493@gmail.com' target='_blank' rel="noopener noreferrer"><FaEnvelope className={`${baseClass} hover:text-red-400 dark:hover:text-red-500`} /></a>
+          </div>
+          <div className='text-xl font-semibold underline hover:cursor-pointer' >
+            <Link href="/blog">
+              Blog coming soon... maybe?
+            </Link>
           </div>
         </div>
         <div className='absolute top-4 right-4 z-10'>
