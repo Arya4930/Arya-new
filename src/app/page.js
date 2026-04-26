@@ -10,7 +10,7 @@ export default function Page() {
     "inline-block text-3xl mr-4 mt-4 transition-all duration-200 hover:scale-110 cursor-pointer";
 
   return (
-    <div className='bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-900 dark:to-slate-800 dark:text-white text-gray-900 font-roboto'>
+    <div className='bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-slate-900 dark:to-slate-800 dark:text-white text-gray-900 font-roboto'>
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen">
 
         {/* LEFT SECTION */}
