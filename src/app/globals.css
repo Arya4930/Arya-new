@@ -19,3 +19,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.carousel-swiper,
+.carousel-swiper .swiper-wrapper,
+.carousel-swiper .swiper-slide {
+  overflow: visible !important;
+}
