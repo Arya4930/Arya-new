@@ -23,6 +23,11 @@ export default function Page() {
             <br />
             I also build things for the Web.
           </div>
+          <div className='mt-4 text-base font-semibold text-gray-600 hover:underline hover:cursor-pointer dark:text-slate-300' >
+            <Link href="/blog">
+              Blog coming soon... maybe?
+            </Link>
+          </div>
           <div className='my-4'>
             <a href='https://discord.com/users/897794324748730368' target="_blank" rel="noopener noreferrer"><FaDiscord className={`${baseClass} hover:text-indigo-400 dark:hover:text-indigo-600`} /></a>
             <a href='https://github.com/Arya4930' target="_blank" rel="noopener noreferrer"><FaGithub className={`${baseClass} hover:text-gray-300 dark:hover:text-gray-600`} /></a>
@@ -32,10 +37,16 @@ export default function Page() {
             <a href='https://www.instagram.com/arya_panwar22/' target="_blank" rel="noopener noreferrer"><FaInstagram className={`${baseClass} hover:text-pink-400 dark:hover:text-pink-500`} /></a>
             <a href='mailto:aryapanwar493@gmail.com' target='_blank' rel="noopener noreferrer"><FaEnvelope className={`${baseClass} hover:text-red-400 dark:hover:text-red-500`} /></a>
           </div>
-          <div className='text-xl font-semibold underline hover:cursor-pointer' >
-            <Link href="/blog">
-              Blog coming soon... maybe?
-            </Link>
+          <div className="mt-3 border-t border-amber-200/80 pt-5 dark:border-slate-700">
+            <p className="text-md font-medium text-gray-500 dark:text-slate-400">
+              Want to build something together?
+            </p>
+            <a
+              href="mailto:contact@arya22.dev"
+              className="mt-1 inline-flex items-center gap-2 text-2xl font-semibold text-gray-900 transition-colors hover:text-blue-500 dark:text-white dark:hover:text-blue-400"
+            >
+              contact@arya22.dev
+            </a>
           </div>
         </div>
         <div className='absolute top-4 right-4 z-10'>

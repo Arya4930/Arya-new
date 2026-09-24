@@ -4,21 +4,23 @@ import DarkModeButton from '../../../components/darkModeButton';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { getPosts, getPost } from '../../../lib/posts.js';
 
+export const dynamic = 'force-static';
+
 const mdxComponents = {
     img: (props) => (
         <img
             {...props}
             className="
-            rounded-2xl
-            shadow-2xl
-            my-12
-            w-full
-            border
-            border-slate-700
-        "
+                rounded-2xl
+                shadow-2xl
+                my-12
+                w-full
+                border
+                border-slate-700
+            "
         />
     )
-}
+};
 
 export async function generateStaticParams() {
     const posts = getPosts();
