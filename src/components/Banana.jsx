@@ -99,13 +99,16 @@ export default function Banana() {
   }, []);
 
   return (
-    <div className="fixed inset-0 w-screen h-screen z-50 pointer-events-none">
+    <div className="fixed inset-0 z-50 hidden h-screen w-screen pointer-events-none md:block">
       <Canvas
         camera={{ position: [0, 0, 2.5], fov: 75 }}
         style={{ pointerEvents: 'none' }}
+        gl={{ toneMappingExposure: 1.45 }}
       >
-        <ambientLight intensity={1.5} />
-        <pointLight position={[10, 10, 10]} />
+        <ambientLight intensity={2.4} />
+        <hemisphereLight args={['#fff7d6', '#7c8aab', 1.2]} />
+        <directionalLight position={[4, 6, 5]} intensity={2.2} />
+        <pointLight position={[10, 10, 10]} intensity={2.5} />
         <BananaModel position={position} onMount={handleMount} />
       </Canvas>
     </div>
