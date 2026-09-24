@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaDiscord, FaReddit, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import DarkModeButton from './components/darkModeButton';
-import Carousel from '@/app/components/Carousel';
-import Footer from './components/Footer';
-import Banana from './components/Banana';
+import DarkModeButton from '../components/darkModeButton';
+import Carousel from '@/components/Carousel';
+import Footer from '../components/Footer';
+import Banana from '../components/Banana';
 import Link from 'next/link';
 
 export default function Page() {

@@ -1,0 +1,168 @@
+---
+title: "Lets Talk UniCC"
+description: "An App that taught me that maybe what people want is more important than building complex features that no one needs"
+publishedAt: "2026-07-05"
+tags:
+  - nextjs
+  - express
+  - webscraping
+  - pwa
+  - mongodb
+  - cloudflare
+  - oracle
+  - buildinpublic
+featured: true
+---
+
+# Built a college app in 3 days… and it ended up with 60,000+ visits.
+
+Let's talk about UniCC, the app that taught me that building what people actually need will always beat building something overly complex.
+
+Back in September 2025, I was having a rough day with my college's official app. No third-party iOS app existed either, so I thought...
+
+> Why not build one myself?
+
+I had done web scraping before using Axios and Cheerio in JavaScript, so I got to work:
+
+- **Day 1** — Automated Login
+- **Day 2** — Scraped all the data that actually mattered
+- **Day 3** — Built a clean, minimalist UI
+
+## Day 1 — Automated Login
+
+Getting authentication working was the first challenge.
+
+The university portal obviously wasn't designed to expose APIs, so everything had to be reverse engineered and scraped directly from the existing website.
+
+After enough request inspection, cookie handling, and session debugging, I eventually got the login flow working reliably.
+
+## Day 2 — Scraping What Actually Matters
+
+The official portal exposed a huge amount of information.
+
+Students only cared about a fraction of it:
+
+- Attendance
+- Timetable
+- Exam schedules
+- Grades
+- Assignments
+- Course information
+
+Instead of recreating the entire portal, I focused entirely on reducing friction.
+
+The goal wasn't feature parity.
+
+The goal was convenience.
+
+## Day 3 — Building the UI
+
+By the end of the third day, I had a lightweight PWA that I positioned as an iOS alternative, showing only the data students actually needed.
+
+![UniCC Home Screen](/posts/unicc/app-home.png)
+
+![UniCC Attendance Screen](/posts/unicc/app-attendance.png)
+
+![UniCC Results Screen](/posts/unicc/app-results.png)
+
+I shared it with a few friends, and then it just... took off.
+
+## The Numbers
+
+📈 **60,000 page views in 2 months**
+
+👥 **~600 daily active users**
+
+For a side project built over a long weekend, those numbers felt unreal.
+
+## The Vercel Incident
+
+It wasn't all smooth sailing though.
+
+Right in the middle of my finals, Vercel hit me with a bill I couldn't afford and took the site down.
+
+Hundreds of users were suddenly asking where it had gone.
+
+That was probably the moment I realized this project had become bigger than I originally intended.
+
+## Rebuilding the Infrastructure
+
+I moved it to Netlify, spun up an Oracle Compute Instance as a VPS, rebuilt the backend in Express, and set up multi-platform deployments across GitHub Actions, Netlify, and Vercel so that no single outage could kill it again.
+
+![Cloudflare Architecture](/posts/unicc/cloudflare.png)
+
+![Oracle Compute Instance](/posts/unicc/oracle.png)
+
+Over time I layered in more features:
+
+- File sharing
+- Backblaze B2 storage proxied through Cloudflare Workers
+- Hashed IDs stored in MongoDB
+- Improved caching and scraping reliability
+
+The app grew organically without me ever pushing hard for it.
+
+## Privacy First
+
+There's no login system by design.
+
+User data lives entirely in `localStorage`.
+
+Privacy first.
+
+## The Stack
+
+Here's the thing that still surprises people:
+
+The entire stack is just:
+
+- Express
+- Axios
+- Cheerio
+- Next.js
+
+That's it.
+
+No fancy AI.
+
+No complex architecture.
+
+No novel technology.
+
+Just a simple tool that solved a real problem people had every single day.
+
+I've seen far more sophisticated projects struggle to get ten users.
+
+UniCC taught me the most valuable lesson I know:
+
+> Build a product, not just a website.
+
+> Solve something real.
+
+The tech doesn't have to be impressive.
+
+The usefulness does.
+
+## The Result Day Incident
+
+The app crashed the server on result day too.
+
+I'm still not sure if that's a win or not.
+
+## Today
+
+I don't touch it much now.
+
+Some things are better left unbroken.
+
+Mostly just the occasional bug fix and code cleanup.
+
+And somehow it still grows a little every day.
+
+✨
+
+## Try it yourself
+
+You can find UniCC here:
+
+https://uni-cc.vercel.app/
