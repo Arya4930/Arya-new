@@ -2,6 +2,7 @@ import Footer from '../../../components/Footer';
 import Banana from '../../../components/Banana';
 import DarkModeButton from '../../../components/darkModeButton';
 import { compileMDX } from 'next-mdx-remote/rsc';
+import { notFound } from 'next/navigation';
 import { getPosts, getPost } from '../../../lib/posts.js';
 
 export const dynamic = 'force-static';
@@ -32,6 +33,10 @@ export async function generateStaticParams() {
 export default async function BlogPage({ params }) {
     const { slug } = await params;
     const post = getPost(slug);
+
+    if (!post) {
+        notFound();
+    }
 
     const { content } = await compileMDX({
         source: post.content,
