@@ -5,7 +5,11 @@ const withMDX = createMDX({
 })
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    outputFileTracingIncludes: {
+        '/*': ['./public/posts/**/*'],
+    },
+};
 
 export default withMDX(nextConfig);
 
